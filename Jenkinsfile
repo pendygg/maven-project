@@ -1,6 +1,9 @@
 pipeline {
     agent any
-    stages{
+    tools {
+        maven 'Jenkins Maven'
+    }
+    stages {
         stage('Build'){
             steps {
                 sh 'mvn clean package'
